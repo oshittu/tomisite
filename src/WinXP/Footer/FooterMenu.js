@@ -1,3 +1,4 @@
+// picture of me imported as 'me' and defines header__img
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -22,6 +23,7 @@ import search from 'assets/windowsIcons/299(32x32).png';
 import run from 'assets/windowsIcons/743(32x32).png';
 import lock from 'assets/windowsIcons/546(32x32).png';
 import user from 'assets/windowsIcons/user.png';
+import me from 'assets/windowsIcons/me.png';
 import shut from 'assets/windowsIcons/310(32x32).png';
 import allProgramsIcon from 'assets/windowsIcons/all-programs.ico';
 import winamp from 'assets/windowsIcons/winamp.png';
@@ -40,8 +42,8 @@ function FooterMenu({ className, onClick }) {
   return (
     <div className={className}>
       <header>
-        <img className="header__img" src={user} alt="avatar" />
-        <span className="header__text">User</span>
+        <img className="header__img" src={me} alt="avatar" />
+        <span className="header__text">Tomi</span>
       </header>
       <section className="menu" onMouseOver={onMouseOver}>
         <hr className="orange-hr" />
@@ -58,10 +60,10 @@ function FooterMenu({ className, onClick }) {
             items={[
               { icon: mine, text: 'Minesweeper' },
               { icon: notepad, text: 'Notepad' },
-              { icon: winamp, text: 'Winamp' },
+              // { icon: winamp, text: 'Winamp' },
               { icon: paint, text: 'Paint' },
-              { icon: mediaPlayer, text: 'Windows Media Player' },
-              { icon: messenger, text: 'Windows Messenger' },
+              // { icon: mediaPlayer, text: 'Windows Media Player' },
+              // { icon: messenger, text: 'Windows Messenger' },
             ]}
           />
           <div style={{ flex: 1 }} />

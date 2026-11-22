@@ -25,6 +25,12 @@ import pullup from 'assets/windowsIcons/pullup.png';
 import logo from 'assets/github-logo.png';
 import mine from 'assets/minesweeper/mine-icon.png';
 import windows from 'assets/windowsIcons/windows.png';
+import UBCOIEEE from 'assets/windowsIcons/UBCOIEEE.png';
+import IEEE from 'assets/windowsIcons/IEEE.png';
+import OKMR from 'assets/windowsIcons/OKMR.png';
+import LinkedIn from 'assets/windowsIcons/LinkedIn.png';
+import FortisBC from 'assets/windowsIcons/FBC.png';
+import Litmus from 'assets/windowsIcons/Litmus.png';
 
 function MyComputer({ onClose }) {
   function onClickOptionItem(item) {
@@ -263,10 +269,11 @@ function MyComputer({ onClose }) {
               </div>
             </div>
           </div>
+          {/* SECTION ONE ----------------------------------------------------------------------------------------*/}
           <div className="com__content__right">
             <div className="com__content__right__card">
               <div className="com__content__right__card__header">
-                Files Stored on This Computer
+                Personal & Collaborative Projects
               </div>
               <div className="com__content__right__card__content">
                 <div className="com__content__right__card__item">
@@ -277,7 +284,7 @@ function MyComputer({ onClose }) {
                   />
                   <div className="com__content__right__card__img-container">
                     <div className="com__content__right__card__text">
-                      Shared Documents
+                      Microcontroller Projects
                     </div>
                   </div>
                 </div>
@@ -289,7 +296,7 @@ function MyComputer({ onClose }) {
                   />
                   <div className="com__content__right__card__img-container">
                     <div className="com__content__right__card__text">
-                      User's Documents
+                      PCB, IC, and SoC Design
                     </div>
                   </div>
                 </div>
@@ -297,52 +304,89 @@ function MyComputer({ onClose }) {
             </div>
             <div className="com__content__right__card">
               <div className="com__content__right__card__header">
-                Hard Disk Drives
+                Engineering Work Experience
               </div>
               <div className="com__content__right__card__content">
                 <div className="com__content__right__card__item">
                   <img
-                    src={disk}
-                    alt="disk"
+                    src={FortisBC}
+                    alt="FortisBC"
                     className="com__content__right__card__img"
                   />
                   <div className="com__content__right__card__img-container">
                     <div className="com__content__right__card__text">
-                      Local Disk (C:)
+                      FortisBC - Distribution Planning
                     </div>
+                  </div>
+                </div>
+                <div className="com__content__right__card__item">
+                  <img
+                    src={Litmus}
+                    alt="Litmus"
+                    className="com__content__right__card__img"
+                  />
+                  <div className="com__content__right__card__img-container">
+                    <div className="com__content__right__card__text">
+                      Litmus Automation - Customer Success
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* SECTION 2 ---------------------------------------------------------------------------------------------- */}
+            <div className="com__content__right__card">
+              <div className="com__content__right__card__header">
+                Clubs and Collaborative Projects
+              </div>
+              <div className="com__content__right__card__content">
+                <div className="com__content__right__card__item">
+                  <img
+                    src={IEEE}
+                    alt="IEEE"
+                    className="com__content__right__card__img"
+                  />
+                  <div className="com__content__right__card__img-container">
+                    <div className="com__content__right__card__text">IEEE</div>
+                  </div>
+                </div>
+
+                <div className="com__content__right__card__item">
+                  <img
+                    src={OKMR}
+                    alt="OKMR"
+                    className="com__content__right__card__img"
+                  />
+                  <div className="com__content__right__card__img-container">
+                    <div className="com__content__right__card__text">OKMR</div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="com__content__right__card">
               <div className="com__content__right__card__header">
-                Devices with Removable Storage
-              </div>
-              <div className="com__content__right__card__content">
-                <div className="com__content__right__card__item">
-                  <div className="com__content__right__card__img-container">
-                    <img
-                      src={cd}
-                      alt="cd"
-                      className="com__content__right__card__img"
-                    />
-                  </div>
-                  <div className="com__content__right__card__text">
-                    CD Drive (D:)
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="com__content__right__card com__content__right__card--me">
-              <div className="com__content__right__card__header">
-                About Me :)
+                Me, elsewhere
               </div>
               <div className="com__content__right__card__content">
                 <a
-                  href="https://github.com/ShizukuIchi"
+                  href="http://www.linkedin.com/in/tomishittu"
                   target="_blank"
                   rel="noreferrer"
-                  className="com__content__right__card__item--me"
+                  className="com__content__right__card__item"
+                >
+                  <img
+                    className="com__content__right__card__img"
+                    src={LinkedIn}
+                    alt="LinkedIn"
+                  />
+                  <div className="com__content__right__card__text">
+                    LinkedIn
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/oshittu"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="com__content__right__card__item"
                 >
                   <img
                     className="com__content__right__card__img"
@@ -350,21 +394,6 @@ function MyComputer({ onClose }) {
                     alt="control"
                   />
                   <div className="com__content__right__card__text">Github</div>
-                </a>
-                <a
-                  href="https://sh1zuku.csie.io"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="com__content__right__card__item--me"
-                >
-                  <img
-                    className="com__content__right__card__img"
-                    src="https://a.ppy.sh/2926513_1448497605.png"
-                    alt="control"
-                  />
-                  <div className="com__content__right__card__text">
-                    My Website
-                  </div>
                 </a>
               </div>
             </div>

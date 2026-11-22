@@ -1,3 +1,4 @@
+import PDFViewer from './PDFViewer';
 import InternetExplorer from './InternetExplorer';
 import Minesweeper from './Minesweeper';
 import ErrorBox from './ErrorBox';
@@ -16,6 +17,8 @@ import notepadLarge from 'assets/windowsIcons/327(32x32).png';
 import winamp from 'assets/windowsIcons/winamp.png';
 import paintLarge from 'assets/windowsIcons/680(32x32).png';
 import paint from 'assets/windowsIcons/680(16x16).png';
+import email from 'assets/windowsIcons/887(32x32).png';
+import resumePdf from 'assets/pdfs/resume.pdf';
 
 const gen = () => {
   let id = -1;
@@ -27,6 +30,45 @@ const gen = () => {
 const genId = gen();
 const genIndex = gen();
 export const defaultAppState = [
+  {
+    component: Notepad,
+    header: {
+      title: 'Welcome!!!!!',
+      icon: notepadLarge,
+    },
+    injectProps: {
+      initialText: `    
+Hiiii im tomi :) <3 <3 <3
+
+i love
+  > electronics engineering
+  > running the IEEE
+  > playing the bass guitar
+  > snowboarding
+  > community
+
+plz click the desktop icons to learn more abt me 
+
+I AM ACTIVELY SEEKING FULLTIME EMPLOYMENT
+
+credits to https://github.com/ShizukuIchi/winXP for the entire backbone of this webapp!!!! cuz i am not a graphic designer Lol... </3
+`,
+    },
+    defaultSize: {
+      width: 720,
+      height: 500,
+    },
+    defaultOffset: {
+      x: 500,
+      y: 100,
+    },
+    resizable: true,
+    minimized: false,
+    maximized: window.innerWidth < 800,
+    id: genId(),
+    zIndex: genIndex(),
+  },
+  /*
   {
     component: InternetExplorer,
     header: {
@@ -107,29 +149,37 @@ export const defaultAppState = [
     maximized: window.innerWidth < 800,
     id: genId(),
     zIndex: genIndex(),
-  },
+  },*/
 ];
 
 export const defaultIconState = [
+  // i wanna change this to 3 icons: project portfolio, resume, personal life
   {
     id: 0,
-    icon: ie,
-    title: 'Internet Explorer',
-    component: InternetExplorer,
+    icon: computerLarge,
+    title: 'ECE Project Portfolio',
+    component: MyComputer,
     isFocus: false,
   },
   {
     id: 1,
-    icon: mine,
-    title: 'Minesweeper',
-    component: Minesweeper,
+    icon: email,
+    title: 'Resume',
+    component: PDFViewer,
     isFocus: false,
   },
   {
     id: 2,
-    icon: computerLarge,
-    title: 'My Computer',
-    component: MyComputer,
+    icon: paintLarge,
+    title: 'Personal Life',
+    component: Paint,
+    isFocus: false,
+  },
+  /*{
+    id: 1,
+    icon: mine,
+    title: 'Minesweeper',
+    component: Minesweeper,
     isFocus: false,
   },
   {
@@ -145,14 +195,7 @@ export const defaultIconState = [
     title: 'Winamp',
     component: Winamp,
     isFocus: false,
-  },
-  {
-    id: 5,
-    icon: paintLarge,
-    title: 'Paint',
-    component: Paint,
-    isFocus: false,
-  },
+  },*/
 ];
 
 export const appSettings = {
@@ -292,6 +335,37 @@ export const appSettings = {
     maximized: window.innerWidth < 800,
     multiInstance: true,
   },
+  'PDF Viewer': {
+    header: {
+      icon: iePaper,
+      title: 'Resume - Internet Explorer',
+    },
+    component: PDFViewer,
+    defaultSize: {
+      width: 750,
+      height: 600,
+    },
+    defaultOffset: {
+      x: 150,
+      y: 40,
+    },
+    injectProps: {
+      docUrl: resumePdf,
+      docTitle: 'Resume.pdf',
+    },
+    resizable: true,
+    minimized: false,
+    maximized: window.innerWidth < 800,
+    multiInstance: true,
+  },
 };
 
-export { InternetExplorer, Minesweeper, ErrorBox, MyComputer, Notepad, Winamp };
+export {
+  InternetExplorer,
+  Minesweeper,
+  ErrorBox,
+  MyComputer,
+  Notepad,
+  Winamp,
+  PDFViewer,
+};
