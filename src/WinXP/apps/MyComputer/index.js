@@ -213,61 +213,6 @@ function MyComputer({ onClose }) {
                 </div>
               </div>
             </div>
-            <div className="com__content__left__card">
-              <div className="com__content__left__card__header">
-                <div className="com__content__left__card__header__text">
-                  Details
-                </div>
-                <img
-                  src={pullup}
-                  alt=""
-                  className="com__content__left__card__header__img"
-                />
-              </div>
-              <div className="com__content__left__card__content">
-                <div className="com__content__left__card__row">
-                  <iframe
-                    title="ghbtn"
-                    style={{ margin: '0 0 3px -1px', height: '30px' }}
-                    src="https://ghbtns.com/github-btn.html?user=ShizukuIchi&repo=winXP&type=star&count=true&size=large"
-                    frameBorder="0"
-                    scrolling="0"
-                    width="170px"
-                    height="20px"
-                  />
-                </div>
-                <div className="com__content__left__card__row">
-                  <img
-                    className="com__content__left__card__img"
-                    src="https://cdn.iconscout.com/icon/free/png-256/medium-1425876-1205067.png"
-                    alt="control"
-                  />
-                  <a
-                    href="https://medium.com/@ShizukuIchi"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="com__content__left__card__text link"
-                  >
-                    Medium
-                  </a>
-                </div>
-                <div className="com__content__left__card__row">
-                  <img
-                    className="com__content__left__card__img"
-                    src={mine}
-                    alt="control"
-                  />
-                  <a
-                    href="https://github.com/ShizukuIchi/minesweeper"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="com__content__left__card__text link"
-                  >
-                    Minesweeper
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
           {/* SECTION ONE ----------------------------------------------------------------------------------------*/}
           <div className="com__content__right">
@@ -297,6 +242,18 @@ function MyComputer({ onClose }) {
                   <div className="com__content__right__card__img-container">
                     <div className="com__content__right__card__text">
                       PCB, IC, and SoC Design
+                    </div>
+                  </div>
+                </div>
+                <div className="com__content__right__card__item">
+                  <img
+                    src={folder}
+                    alt="folder"
+                    className="com__content__right__card__img"
+                  />
+                  <div className="com__content__right__card__img-container">
+                    <div className="com__content__right__card__text">
+                      Software Engineering
                     </div>
                   </div>
                 </div>

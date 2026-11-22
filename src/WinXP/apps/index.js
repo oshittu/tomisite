@@ -1,3 +1,4 @@
+import PhotoGallery from './PhotoGallery';
 import PDFViewer from './PDFViewer';
 import InternetExplorer from './InternetExplorer';
 import Minesweeper from './Minesweeper';
@@ -157,7 +158,7 @@ export const defaultIconState = [
   {
     id: 0,
     icon: computerLarge,
-    title: 'ECE Project Portfolio',
+    title: 'ECE Portfolio',
     component: MyComputer,
     isFocus: false,
   },
@@ -172,7 +173,7 @@ export const defaultIconState = [
     id: 2,
     icon: paintLarge,
     title: 'Personal Life',
-    component: Paint,
+    component: PhotoGallery,
     isFocus: false,
   },
   /*{
@@ -265,7 +266,7 @@ export const appSettings = {
     },
     component: MyComputer,
     defaultSize: {
-      width: 660,
+      width: 700,
       height: 500,
     },
     defaultOffset: {
@@ -356,7 +357,26 @@ export const appSettings = {
     resizable: true,
     minimized: false,
     maximized: window.innerWidth < 800,
-    multiInstance: true,
+    multiInstance: false,
+  },
+  PhotoGallery: {
+    header: {
+      icon: paint, // imported from assets/windowsIcons
+      title: 'Photos',
+    },
+    component: PhotoGallery,
+    defaultSize: {
+      width: 700,
+      height: 500,
+    },
+    defaultOffset: {
+      x: 160,
+      y: 60,
+    },
+    resizable: true,
+    minimized: false,
+    maximized: window.innerWidth < 800,
+    multiInstance: false, // true = can open multiple copies; false = single window
   },
 };
 
@@ -368,4 +388,5 @@ export {
   Notepad,
   Winamp,
   PDFViewer,
+  PhotoGallery,
 };
