@@ -229,7 +229,7 @@ function MyComputer({ onClose }) {
                   />
                   <div className="com__content__right__card__img-container">
                     <div className="com__content__right__card__text">
-                      Microcontroller Projects
+                      Circuit Design (+PCB, IC, SoC)
                     </div>
                   </div>
                 </div>
@@ -241,7 +241,7 @@ function MyComputer({ onClose }) {
                   />
                   <div className="com__content__right__card__img-container">
                     <div className="com__content__right__card__text">
-                      PCB, IC, and SoC Design
+                      Microcontroller Projects
                     </div>
                   </div>
                 </div>

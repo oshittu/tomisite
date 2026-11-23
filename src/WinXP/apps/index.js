@@ -50,13 +50,14 @@ i love
 
 plz click the desktop icons to learn more abt me 
 
-I AM ACTIVELY SEEKING FULLTIME EMPLOYMENT
+as i have more freetime i will make the site more integrated <3 
+for now plz check out my resume!
 
-credits to https://github.com/ShizukuIchi/winXP for the entire backbone of this webapp!!!! cuz i am not a graphic designer Lol... </3
+credits to https://github.com/ShizukuIchi/winXP for the backbone of this webapp!!!! cuz i am not a graphic designer Lol... </3
 `,
     },
     defaultSize: {
-      width: 720,
+      width: 670,
       height: 500,
     },
     defaultOffset: {
@@ -130,7 +131,7 @@ credits to https://github.com/ShizukuIchi/winXP for the entire backbone of this 
     maximized: false,
     id: genId(),
     zIndex: genIndex(),
-  },
+  }, */
   {
     component: MyComputer,
     header: {
@@ -139,7 +140,7 @@ credits to https://github.com/ShizukuIchi/winXP for the entire backbone of this 
     },
     defaultSize: {
       width: 660,
-      height: 500,
+      height: 550,
     },
     defaultOffset: {
       x: 250,
@@ -150,7 +151,7 @@ credits to https://github.com/ShizukuIchi/winXP for the entire backbone of this 
     maximized: window.innerWidth < 800,
     id: genId(),
     zIndex: genIndex(),
-  },*/
+  },
 ];
 
 export const defaultIconState = [
