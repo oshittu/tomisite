@@ -1,4 +1,7 @@
-import PhotoGallery from './PhotoGallery';
+import ProjectPage from './ProjectPage';
+import OKMR from './ProjectPage/OKMR';
+import FolderExplorer from './FolderExplorer';
+import PhotoViewer from './PhotoViewer';
 import PDFViewer from './PDFViewer';
 import InternetExplorer from './InternetExplorer';
 import Minesweeper from './Minesweeper';
@@ -20,6 +23,9 @@ import paintLarge from 'assets/windowsIcons/680(32x32).png';
 import paint from 'assets/windowsIcons/680(16x16).png';
 import email from 'assets/windowsIcons/887(32x32).png';
 import resumePdf from 'assets/pdfs/resume.pdf';
+import cutefortisdog from 'assets/tomipics/cutefortis.jpg';
+import litmuslastday from 'assets/tomipics/litmuslastday.jpg';
+import folder from 'assets/windowsIcons/318(48x48).png';
 
 const gen = () => {
   let id = -1;
@@ -174,7 +180,7 @@ export const defaultIconState = [
     id: 2,
     icon: paintLarge,
     title: 'Personal Life',
-    component: PhotoGallery,
+    component: FolderExplorer,
     isFocus: false,
   },
   /*{
@@ -200,6 +206,7 @@ export const defaultIconState = [
   },*/
 ];
 
+// THIS IS WHERE PRESETS ARE STORED.........---------------------
 export const appSettings = {
   'Internet Explorer': {
     header: {
@@ -360,12 +367,18 @@ export const appSettings = {
     maximized: window.innerWidth < 800,
     multiInstance: false,
   },
-  PhotoGallery: {
+  // PHOTO PRESETS ----------------------------------------------------------
+  // fortis dog photo
+  cutefortisdog: {
     header: {
       icon: paint, // imported from assets/windowsIcons
       title: 'Photos',
     },
-    component: PhotoGallery,
+    component: PhotoViewer,
+    injectProps: {
+      imgUrl: cutefortisdog,
+      imgTitle: 'cutefortis.jpg',
+    },
     defaultSize: {
       width: 700,
       height: 500,
@@ -377,7 +390,82 @@ export const appSettings = {
     resizable: true,
     minimized: false,
     maximized: window.innerWidth < 800,
-    multiInstance: false, // true = can open multiple copies; false = single window
+    multiInstance: true, // true = can open multiple copies; false = single window
+  },
+  // litmus office photo
+  litmuslastday: {
+    header: {
+      icon: paint, // imported from assets/windowsIcons
+      title: 'Photos',
+    },
+    component: PhotoViewer,
+    injectProps: {
+      imgUrl: litmuslastday,
+      imgTitle: 'litmuslastday.jpg',
+    },
+    defaultSize: {
+      width: 700,
+      height: 500,
+    },
+    defaultOffset: {
+      x: 160,
+      y: 60,
+    },
+    resizable: true,
+    minimized: false,
+    maximized: window.innerWidth < 800,
+    multiInstance: true, // true = can open multiple copies; false = single window
+  },
+  OKMR: {
+    header: {
+      title: 'OKMR.html - Internet Explorer',
+      icon: iePaper,
+    },
+    component: ProjectPage,
+    injectProps: {
+      fileName: 'OKMR.html',
+      ContentComponent: OKMR,
+    },
+    defaultSize: {
+      width: 780,
+      height: 600,
+    },
+    defaultOffset: {
+      x: 180,
+      y: 50,
+    },
+    resizable: true,
+    minimized: false,
+    maximized: window.innerWidth < 800,
+    multiInstance: true,
+  },
+  'Personal Life': {
+    header: { title: 'Personal Life', icon: folder },
+    component: FolderExplorer,
+    injectProps: {
+      title: 'Hobbies (folder in-progress)',
+      items: [
+        { name: 'Bass Guitar', icon: folder, app: 'PhotoGallery' },
+        {
+          name: 'Snowboarding',
+          icon: folder,
+          url: 'https://youtu.be/9dSKe6M3BNM?si=7uUrdSGxVsld1bzp',
+        },
+        { name: 'Fishing', icon: folder, url: 'https://github.com/...' },
+      ],
+    },
+    defaultSize: {
+      width: 660,
+      height: 500,
+    },
+    defaultOffset: {
+      x: 260,
+      y: 50,
+    },
+    resizable: true,
+    minimized: false,
+    maximized: window.innerWidth < 800,
+    multiInstance: true,
   },
 };
 
@@ -389,5 +477,6 @@ export {
   Notepad,
   Winamp,
   PDFViewer,
-  PhotoGallery,
+  PhotoViewer as PhotoGallery,
+  FolderExplorer,
 };

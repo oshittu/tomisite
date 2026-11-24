@@ -32,7 +32,7 @@ import LinkedIn from 'assets/windowsIcons/LinkedIn.png';
 import FortisBC from 'assets/windowsIcons/FBC.png';
 import Litmus from 'assets/windowsIcons/Litmus.png';
 
-function MyComputer({ onClose }) {
+function MyComputer({ onClose, onOpenApp }) {
   function onClickOptionItem(item) {
     switch (item) {
       case 'Close':
@@ -217,6 +217,9 @@ function MyComputer({ onClose }) {
           {/* SECTION ONE ----------------------------------------------------------------------------------------*/}
           <div className="com__content__right">
             <div className="com__content__right__card">
+              <div className="com__content__right__card__text">
+                folders coming soon! plz see resume for now
+              </div>
               <div className="com__content__right__card__header">
                 Personal & Collaborative Projects
               </div>
@@ -264,26 +267,37 @@ function MyComputer({ onClose }) {
                 Engineering Work Experience
               </div>
               <div className="com__content__right__card__content">
-                <div className="com__content__right__card__item">
+                {/* FortisBC Card */}
+                <div
+                  className="com__content__right__card__item"
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => onOpenApp && onOpenApp('cutefortisdog')}
+                >
                   <img
                     src={FortisBC}
                     alt="FortisBC"
                     className="com__content__right__card__img"
                   />
                   <div className="com__content__right__card__img-container">
-                    <div className="com__content__right__card__text">
+                    <div className="com__content__right__card__text link">
                       FortisBC - Distribution Planning
                     </div>
                   </div>
                 </div>
-                <div className="com__content__right__card__item">
+
+                {/* Litmus Card */}
+                <div
+                  className="com__content__right__card__item"
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => onOpenApp && onOpenApp('litmuslastday')}
+                >
                   <img
                     src={Litmus}
                     alt="Litmus"
                     className="com__content__right__card__img"
                   />
                   <div className="com__content__right__card__img-container">
-                    <div className="com__content__right__card__text">
+                    <div className="com__content__right__card__text link">
                       Litmus Automation - Customer Success
                     </div>
                   </div>
@@ -306,15 +320,20 @@ function MyComputer({ onClose }) {
                     <div className="com__content__right__card__text">IEEE</div>
                   </div>
                 </div>
-
-                <div className="com__content__right__card__item">
+                <div
+                  className="com__content__right__card__item"
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => onOpenApp && onOpenApp('OKMR')}
+                >
                   <img
                     src={OKMR}
                     alt="OKMR"
                     className="com__content__right__card__img"
                   />
                   <div className="com__content__right__card__img-container">
-                    <div className="com__content__right__card__text">OKMR</div>
+                    <div className="com__content__right__card__text link">
+                      OKMR
+                    </div>
                   </div>
                 </div>
               </div>
@@ -703,6 +722,16 @@ const Div = styled.div`
   .com__content__right__card__text {
     white-space: nowrap;
     height: 100%;
+
+    &.link {
+      color: #0c327d;
+    }
+  }
+
+  /* Underlines and brightens when hovering over the card */
+  .com__content__right__card__item:hover .com__content__right__card__text.link {
+    color: #2b72ff;
+    text-decoration: underline;
   }
   .com__content__right__card--me {
     .com__content__right__card__header:after,

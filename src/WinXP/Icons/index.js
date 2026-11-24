@@ -60,7 +60,7 @@ function Icon({
     onMouseDown(id);
   }
   function _onDoubleClick() {
-    onDoubleClick(component);
+    onDoubleClick(title, component); // now passing titles
   }
   useEffect(() => {
     const target = ref.current;

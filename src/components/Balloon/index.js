@@ -31,10 +31,10 @@ function Balloon({ startAfter = 3000, duration = 15000 }) {
             </span>
           </div>
           <p className="balloon__text__first">
-            Antivirus software might not be installed
+            justttt kidding no virus here :)
           </p>
           <p className="balloon__text__second">
-            Click this balloon to fix this problem.
+            shoutout my benefactors: mom and dad
           </p>
         </div>
       </Div>

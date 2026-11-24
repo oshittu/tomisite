@@ -215,12 +215,20 @@ function WinXP() {
   function onMouseDownIcon(id) {
     dispatch({ type: FOCUS_ICON, payload: id });
   }
-  function onDoubleClickIcon(component) {
-    const appSetting = Object.values(appSettings).find(
-      setting => setting.component === component,
-    );
+  function onDoubleClickIcon(title, component) {
+    const appSetting =
+      appSettings[title] ||
+      Object.values(appSettings).find(
+        setting => setting.component === component,
+      );
     dispatch({ type: ADD_APP, payload: appSetting });
   }
+  const onOpenApp = useCallback(appName => {
+    const appSetting = appSettings[appName];
+    if (appSetting) {
+      dispatch({ type: ADD_APP, payload: appSetting });
+    }
+  }, []);
   function getFocusedAppId() {
     if (state.focusing !== FOCUSING.WINDOW) return -1;
     const focusedApp = [...state.apps]
@@ -308,6 +316,7 @@ function WinXP() {
         onMinimize={onMinimizeWindow}
         onMaximize={onMaximizeWindow}
         focusedAppId={focusedAppId}
+        onOpenApp={onOpenApp}
       />
       <Footer
         apps={state.apps}
