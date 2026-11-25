@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tomisite/static/css/main.f012863c.css",
-    "main.js": "/tomisite/static/js/main.ace7b377.js",
+    "main.js": "/tomisite/static/js/main.eaa2d1ad.js",
     "static/media/me.png": "/tomisite/static/media/me.21fededaf82f045763ea.png",
     "static/media/litmuslastday.jpg": "/tomisite/static/media/litmuslastday.423fbd39cf784e64cb99.jpg",
     "static/media/cutefortis.jpg": "/tomisite/static/media/cutefortis.b5ce6440dc82e6675688.jpg",
@@ -17,10 +17,10 @@
     "index.html": "/tomisite/index.html",
     "static/media/find.svg": "/tomisite/static/media/find.303b87f499358979b1c66a3da1584e67.svg",
     "main.f012863c.css.map": "/tomisite/static/css/main.f012863c.css.map",
-    "main.ace7b377.js.map": "/tomisite/static/js/main.ace7b377.js.map"
+    "main.eaa2d1ad.js.map": "/tomisite/static/js/main.eaa2d1ad.js.map"
   },
   "entrypoints": [
     "static/css/main.f012863c.css",
-    "static/js/main.ace7b377.js"
+    "static/js/main.eaa2d1ad.js"
   ]
 }
